@@ -1,0 +1,65 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+header {
+  background-color: rgb(77, 119, 255);
+  border-radius: 5px;
+}
+
+.logo {
+  font-family: "Caveat", cursive;
+  font-size: 55px;
+}
+
+.inprco {
+  padding-top: 25px;
+  font-family: "Montserrat", sans-serif;
+  color: whitesmoke;
+  text-align: right;
+}
+
+.productos {
+  color: rgb(86, 187, 241);
+  background-color: whitesmoke;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.card {
+  margin-left: 25px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card-body {
+  background-color: whitesmoke;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: 5px;
+}
+
+.planes {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  background-color: whitesmoke;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 5px;
+  padding-top: 15px;
+}
+
+.iconos {
+  text-align: center;
+}
+
+.carrito {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(77, 119, 255);
+}
