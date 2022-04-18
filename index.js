@@ -4,7 +4,7 @@ function renderProducto({ description, price, title, id }) {
     <div class="card-body">
        <p id="plan3Tel">${description}</p>
        <p>${price}</p>
-      <button id="producto-${id}" href="#" class="btn btn-primary boton"  style="width: 100px">
+      <button id="producto-${id}" href="#" class="btn btn-primary boton boton-producto"   style="width: 100px">
         <img width="30px" height="30px" src="/imagenes/add-to-cart.png">
       </button>
     </div>`;
@@ -63,7 +63,7 @@ $(document).ready(function () {
     }
     const quetzales = []
     const arrD = []
-    $('button').click(function () {
+    $('.boton-producto').click(function () {
         const botonP = $(this).attr('id').split("-")
         const carriF = planes.find(function (value) {
             return value.id === Number(botonP[1])
@@ -99,5 +99,26 @@ $(document).ready(function () {
         if (arrD.length === 3) {
             $('#descuento').html('20% ' + String(desc20.toFixed(2)))
         }
+    })
+    $('#enviar').click(function () {
+        const settings = {
+            "url": "http://192.168.0.11:8080/api/productos",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            statusCode: {
+                201: function (response) {
+                    swal(response.message, " ", "success");
+                },
+            },
+            "data": JSON.stringify({
+                "nombre": $('#planname').val(),
+                "descripcion": $('#plandescription').val(),
+                "tipo": $('#plantype').val(),
+                "precio": Number($('#planprice').val())
+            }),
+        };
+        $.ajax(settings)
     })
 })
