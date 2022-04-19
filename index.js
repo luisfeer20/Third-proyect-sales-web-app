@@ -56,7 +56,7 @@ $(document).ready(function () {
     for (let i = 0; i < planesTv.length; i++) {
         $('#planes-tv').append(renderProducto({
             title: planesTv[i].title,
-            description: planesInt[i].description,
+            description: planesTv[i].description,
             price: planesTv[i].price,
             id: planesTv[i].id
         }))
@@ -109,6 +109,9 @@ $(document).ready(function () {
             },
             statusCode: {
                 201: function (response) {
+                    swal(response.message, " ", "success");
+                },
+                200: function (response) {
                     swal(response.message, " ", "success");
                 },
             },
