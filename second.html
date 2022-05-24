@@ -39,6 +39,34 @@
         </div>
       </header>
     <body>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card border-0">
+              <div class="card-tittle planes">
+                Productos
+              </div>
+              <div class="card-body">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">Nombre del Plan</th>
+                      <th scope="col">Descripcion del Plan</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col">Tipo de Plan</th>
+                      <th scope="col">Editar</th>
+                      <th scope="col">Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tablaP">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col md-7">
@@ -47,7 +75,7 @@
                         <div class="card-body">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon2">Nombre del Plan</span>
-                                <input id="planname" type="text" class="form-control" placeholder="Ejemplo: Plankemellama 00" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input  id="planname" type="text" class="form-control" placeholder="Ejemplo: Plankemellama 00" aria-label="Recipient's username" aria-describedby="basic-addon2">
                               </div>
                               <div class="input-group mb-3">
                                 <span class="input-group-text">Descripcion del Plan</span>
@@ -67,7 +95,9 @@
                                     <span class="input-group-text">Q</span>
                                     <input id="planprice" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                                   </div>
+                                  <div hidden><input type="text" name="id" id="planid"></div>
                                   <button id="enviar" href="#" class="btn btn-primary boton"  style="width: 100px">Enviar</button>
+                                  <button id="eliminar" href="#" class="btn btn-primary boton"  style="width: 100px">Eliminar</button>
                               </div>
                         </div>
                     </div>
